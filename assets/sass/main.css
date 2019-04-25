@@ -14,4 +14,28 @@
 .btn-menu {
   padding-right: 15px;
 }
+
+.logo {
+  text-align: center;
+}
+
+.contenedor {
+  background-image: url("../img/Background.png");
+  height: 500px;
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #5cb85c;
+}
+
+.btn-menu:hover {
+  color: #F45E00;
+}
+
+.textos, .btn-menu, .redes {
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
