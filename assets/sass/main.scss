@@ -68,6 +68,33 @@ $main-color: #EB5C01;
 .img-historia{
     width: 100%;
 }
+.historia{
+    padding-top: 100px;
+    color: white;
+}
+.cont-txt-historia{
+    margin: auto;
+    margin-left: -150px;
+}
+.txt-historia{
+    font-size: 23px;
+    line-height: 22px;
+    padding-top: 25px;
+    padding-left: 20px; 
+}
+.btn-historia{
+    background: black;
+    color: white;
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    padding-right: 10px;
+    margin-bottom: 25px;
+}
+.cont-text{
+    width: 124%;
+    background: $main-color;
+}
 .img-medida{
     width: 80%;
     margin: 40px;
