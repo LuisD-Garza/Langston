@@ -116,4 +116,69 @@
   width: 80%;
   margin: 40px;
 }
+
+.cont-product {
+  text-align: center;
+  margin-top: 20px;
+  background: #8E8E8E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 23px;
+  width: 183px;
+  height: 180px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cont-product:hover {
+  background: #F9B256;
+  cursor: pointer;
+}
+
+.pruebas {
+  width: 80%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-product {
+  position: absolute;
+  padding-bottom: 110px;
+}
+
+.productos {
+  padding-top: 73px;
+}
+
+.txt-product {
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 14px;
+}
+
+.cont-img-pruebas {
+  margin-top: -70px;
+}
+
+.pruebas-cont {
+  background: #EB5C01;
+  height: 250px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.label-txt-pruebas {
+  height: 25px;
+}
 /*# sourceMappingURL=main.css.map */

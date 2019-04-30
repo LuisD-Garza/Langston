@@ -1,4 +1,6 @@
 $main-color: #EB5C01;
+$cont-product: #8E8E8E;
+$hover-product: #F9B256;
 .redes{
     padding-right: 21px;
     font-size: 20px;
@@ -98,4 +100,49 @@ $main-color: #EB5C01;
 .img-medida{
     width: 80%;
     margin: 40px;
+}
+.cont-product{
+    text-align: center;
+    margin-top: 20px;
+    background: $cont-product;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+    width: 183px;
+    height: 180px;
+    transition: 0.3s;
+}
+.cont-product:hover{
+    background: $hover-product;
+    cursor: pointer;
+    //animation: 3s ease;
+}
+.pruebas{
+    width: 80%;
+    height: 500px;
+    display: flex;
+}
+.img-product{
+    position: absolute;
+    padding-bottom: 110px;
+}
+.productos{
+    padding-top: 73px;
+}
+.txt-product{
+    color: white;
+    align-self: flex-end;
+    padding-bottom: 14px;
+}
+.cont-img-pruebas{
+    margin-top: -70px;
+}
+.pruebas-cont{
+    background:$main-color ;
+    height: 250px;
+    align-self: center;
+}
+.label-txt-pruebas{
+    height: 25px;;
 }
