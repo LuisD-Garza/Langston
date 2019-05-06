@@ -435,13 +435,18 @@ footer {
   background-size: cover;
 }
 .cont-sectores{
+  color: white;
       text-align: center;
     background: #EB5C01;
     /* margin: 0% 10%; */
     width: 50% !important;
 }
 .cont-1-img{
-  padding-top: 10%;
+  margin-top: -5%;
+  padding-top: 15%;
+}
+.cont-2-img{
+  padding-top: 5%;
 }
 .cont-alimentos{    
   padding: 0px;
