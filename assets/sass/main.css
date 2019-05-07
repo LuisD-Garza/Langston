@@ -1,3 +1,4 @@
+
 .redes {
   padding-right: 21px;
   font-size: 20px;
@@ -230,7 +231,7 @@ footer {
 
 .contenedor-nosotros {
   background-image: url(../img/Bg-nosotros.png);
-  height: 500px;
+  
   background-size: cover;
 }
 
@@ -431,7 +432,7 @@ footer {
 }
 .contenedor-cert-meb{
   background-image: url(../img/Bg-Cert-Meb.png);
-  height: 500px;
+
   background-size: cover;
 }
 .cont-sectores{
@@ -469,4 +470,65 @@ footer {
     /* display: inline; */
     padding-right: 10%;
   }
+  /*Por que lagstone*/
+  .play{
+    font-size:50px;
+}
+.cont-porque{
+    background: #EB5C01;
+}
+.fa-check {
+    
+    color: white;
+  }
+  .contenedor-porque{
+  background-image: url(../img/Bg-porque.png);
+  background-size: cover;
+}
+.cont-cont{
+  margin: auto !important;
+  padding-bottom: 5%;
+}
+.map-footer-1{
+      border: 0;
+    /* padding-left: 62px; */
+    /* margin-right: -62px; */
+    width: 100%;
+    height: 100%;
+}
+.cont-map{
+  height: 300px;
+}
+  .contenedor-sect{
+  background-image: url(../img/Bg-sect.png);
+  background-size: cover;
+}
+.btn-product{
+  padding: 15px;
+  background: #EB5C01;
+}
+.cont-hecho-medida{
+  margin:0px 5%;
+}
+@media (max-width: 770px){
+  .menu{
+    font-size: 14px;
+  }
+  .cont-header{
+        justify-content: center !important;
+  }
+.text-hecho-medida {
+    padding-left: 50px;
+    padding-top: 10%;
+    margin-bottom: 0px;
+}
+.face {
+    padding-left: 0px;
+}
+.redes {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+}
 /*# sourceMappingURL=main.css.map */
