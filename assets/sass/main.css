@@ -11,7 +11,10 @@
 .main-text {
   font-size: 70px;
 }
-
+.bg-navbar-r{
+  display: none !important;
+  background:#eb5c01b8!important;;
+}
 .btn-menu {
   padding-right: 15px;
 }
@@ -201,11 +204,14 @@
 
 footer {
   height: 400px;
-  background: gray;
+  background: #3D3D3D;
 }
 
 .social-footer {
-  height: 15%;
+  justify-content: flex-end;
+    display: flex;
+    height: 15%;
+    padding-top: 20px;
 }
 
 .text-footer {
@@ -507,15 +513,49 @@ footer {
   padding: 15px;
   background: #EB5C01;
 }
+.respons{
+  display: none;
+}
 .cont-hecho-medida{
   margin:0px 5%;
 }
+.txt-footer-r {
+    padding-left: 0px;
+    margin: 0px;
+}
+.map-footer-r{
+    border: 0; 
+    padding-left: 0px;
+    margin-right: 0px; 
+    width: 100%;
+    height: 100%;
+}
+.menu{
+  display: flex;
+}
+
+/*Tablet */
 @media (max-width: 770px){
+  .bg-navbar-r{
+    display: flex !important;
+  }
+  .menu{
+    display: none;
+  }
+  .cont-txt-historia{
+    margin-left: 0px;
+  }
+  .respons{
+  display: block;
+}
+.normal{
+  display: none;
+}
   .menu{
     font-size: 14px;
   }
   .cont-header{
-        justify-content: center !important;
+        justify-content: normal !important;
   }
 .text-hecho-medida {
     padding-left: 50px;
@@ -529,6 +569,57 @@ footer {
     padding-right: 5px;
     font-size: 20px;
 }
+.img{
+  width: 100%;
+  height: 100%;
+}
 
+.textos-hecho-medida{
+  padding-bottom: 5%;
+}
+.textos-hecho-medida p{
+  font-size: 20px; 
+}
+.cont-text p {
+  font-size: 15px;
+}
+.txt-product{
+  font-size: 20px;
+}
+.cont-img-pruebas {
+    margin-top: -45px;
+    margin-bottom: -45px;
+}
+.cont-img-pruebas img{
+      width: 100%;
+    height: 100%;
+}
+.label-txt-pruebas {
+    height: 25px;
+}
+.text-white h2{ font-size: 1.75rem; }
+}
+/*movil'l*/
+@media (max-width: 425px){
+  footer{height: auto;}
+  .main-text{
+    font-size: 40px;
+  }
+  .textos p{
+    font-size: 10px;
+  }
+  .secondary-txt-medida{ font-size: 20px }
+  .p-txt-medida{ font-size: 15px; line-height: 15px; }
+  .pruebas{ width: 100%; }
+  .fa-check { font-size: 15px; }
+  .label-txt-pruebas .text-white{ font-size: 15px }
+  .tittle-certificado{ font-size: 1.25rem !important; }
+  .pruebas-cont .col-2 img{ width: 100%; height: 100%; }
+  .certificados{ margin:0px; }
+}
+@media (max-width: 425px){
+  .main-text{ font-size: 19px; }
+  .secondary-txt-medida{ font-size: 15px; }
+  .p-txt-medida{}
 }
 /*# sourceMappingURL=main.css.map */
