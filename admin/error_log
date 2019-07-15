@@ -1,0 +1,14 @@
+[04-Jun-2019 15:20:22 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:20:28 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:20:28 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home1/mercadot/public_html/Langston-3/admin/index.php on line 9
+[04-Jun-2019 15:59:13 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:59:22 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:59:22 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home1/mercadot/public_html/Langston-3/admin/index.php on line 9
+[04-Jun-2019 15:59:31 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:59:31 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home1/mercadot/public_html/Langston-3/admin/index.php on line 9
+[04-Jun-2019 15:59:36 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 15:59:36 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home1/mercadot/public_html/Langston-3/admin/index.php on line 9
+[04-Jun-2019 16:00:37 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 16:00:53 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3
+[04-Jun-2019 16:00:53 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home1/mercadot/public_html/Langston-3/admin/index.php on line 9
+[04-Jun-2019 16:03:45 America/Chicago] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'mercadot_luis'@'localhost' (using password: YES) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 3

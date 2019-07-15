@@ -1,0 +1,2 @@
+[20-May-2019 10:20:51 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/mercadot/public_html/Langston-3/admin/Nosotros/mixto-s.php:1) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 2
+[20-May-2019 10:21:09 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/mercadot/public_html/Langston-3/admin/Nosotros/mixto-s.php:1) in /home1/mercadot/public_html/Langston-3/admin/nucleo.php on line 2
