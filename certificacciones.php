@@ -1,98 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!--By Luis Garza -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Langston</title>
-    <!--Styles-->
-    <link rel="stylesheet" href="assets/sass/main.css">
-    <!--Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="assets/js/nab-bar.js" type=""></script>
-    <!--Bootstrap-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" >
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" >
-    </script>
-    <!--Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <style>
-      body, .body, html { overflow-x: hidden !important; }
-    </style> 
-</head>
+    <?php include('head.php') ?>
 <body>
+    <?php $page = 'certificaciones';include('navbar.php') ?>
     <?php include('chat.php') ?>
-<nav class="navbar navbar-expand-md navbar-dark bg-navbar-r fixed-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">
-        <img src="assets/img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <span class="menu-collapsed">Langston</span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link" href="nosotros.php">Nosotros </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="productos.php">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="certificacciones.php">Certificacciones <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">   
-                <a href="sectores.php" class="nav-link">Sectores</a>
-            </li>
-            <li class="nav-item">   
-                <a href="porqueLangston.php" class="nav-link">¿Por qué Langston?</a>
-            </li>
-            <li class="nav-item">   
-                <a href="contact.php" class="nav-link">Contacto</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-   <header class="contenedor-cert-meb">
-        <div class="container cont-cont row pt-5">
-            <div class="menu col justify-content-end">
-                <div class="col-2 logo">
-                    <img src="assets/img/LOGO.png" alt="">
-                </div>
-                <a id="btn-nosotros" class="btn-menu" href="nosotros.php">Nosotros</a>
-                <a id="btn-productos" class="btn-menu" href="productos.php">Productos</a>
-                <a id="btn-certifiacciones" class="btn-menu" href="certificacciones.php">Certificaciones</a>
-                <a id="btn-sectores" class="btn-menu" href="sectores.php">Sectores</a>
-                <a id="btn-porque" class="btn-menu" href="porqueLangston.php">¿Por qué Langston?</a>
-                <a id="btn-contacto" class="btn-menu" href="contact.php">Contacto</a>
-
-                <i class="redes face fab fa-facebook-f"></i>
-                <i class="redes fab fa-twitter"></i>
-                <i class="redes fas fa-envelope"></i>
-                <i class="redes fas fa-phone"></i>
-            </div>
-            <div class="col cont-nosotros pt-0">
-                <div class=" cont-header d-flex justify-content-end ">
-                    <div class="textos col-12 text center">
-                        <h1 class="main-text text-center">Certificaciones<br> y Membresías</h1>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
     <div class="body">
-            
-        <div class="row certificaccion-3">
-            <div class="certificaccion-">
-                        <?php include('admin/dbcon.php');
-                        $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 1"); 
-                        while($rown = mysqli_fetch_array($selectcii)){
-                        ?>
+        <div class="contenedor-certificaciones">
+        <div class="container cont-cont row pt-5">
+            <div class="pt-5 col-12 cont-header d-flex justify-content-end ">
+                <div class="textos col">
+                    <h3 class="main-text text-center pt-4 text-white">Certificaciones<br> y Membresías</h3>
+                </div>
+            </div>
+         </div>
+           
+        <div class="row certificaccion-3 pb-5" data-aos="fade-right" data-aos-duration="1000">
+            <div class="certificaccion-" style="background: #eb5c01b0">
+                <?php include('admin/dbcon.php');
+                $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 1"); 
+                while($rown = mysqli_fetch_array($selectcii)){
+                ?>
                 <h2 class="tittle-cert-1 tittle-cert" ><?php echo utf8_encode($rown['titulo']);?></h2>
                     <?php } ?>
                 <?php include('admin/dbcon.php');
@@ -120,23 +47,24 @@
                         $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 13"); 
                         while($rown = mysqli_fetch_array($selectcii)){
                         ?>
-                         <img class="cap-8" src="assets/img/<?php echo $rown['img'];?>"" alt="">
+                         <img class="cap-8" src="assets/img/<?php echo $rown['img'];?>" alt="" data-aos="flip-up" data-aos-duration="2000">
                         <?php } ?>
                         <?php include('admin/dbcon.php');
                         $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 14"); 
                         while($rown = mysqli_fetch_array($selectcii)){
                         ?>
-                         <img class="cap-7" src="assets/img/<?php echo $rown['img'];?>" alt="">
+                         <img class="cap-7" src="assets/img/<?php echo $rown['img'];?>" alt="" data-aos="flip-up" data-aos-duration="2000">
                         <?php } ?>
                     </div>
                     
             </div>
         </div>
-        <div class="row certificaccion-2" >
-            <div class="col-3 normal" >
-                <img class="img-cert-2" src="assets/img/Capa 11.png">
+
+        <div class="row certificaccion-2 pt-5 pb-5" data-aos="fade-left" data-aos-duration="1000" >
+            <div class="col-3 normal mt-3" style="background: #eb5c01b0" >
+                <img class="img-cert-2" src="assets/img/Capa 11.png" data-aos="flip-up" data-aos-duration="2000">
             </div>
-            <div class="col-9 certificaccion- cert-2" >
+            <div class="col-9 certificaccion- mt-3" style="background: #eb5c01b0" >
                 <div class="col d-flex align-items-center" >
                 <?php include('admin/dbcon.php');
                 $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 15"); 
@@ -153,8 +81,8 @@
                 ?>
                     <p><?php echo utf8_encode($rown['descripcion']);?></p>
                     <div class="d-flex">
-                        <p class="col-6 text-right" ><?php echo utf8_encode($rown['descripcion2']);?></p>
-                        <p class="col-6 text-right"><?php echo utf8_encode($rown['descripcion3']);?></p>
+                        <p class="col-6 text-justify" ><?php echo utf8_encode($rown['descripcion2']);?></p>
+                        <p class="col-6 text-justify"><?php echo utf8_encode($rown['descripcion3']);?></p>
                     </div>
                 <?php } ?>
                 </div>
@@ -166,8 +94,9 @@
                 <?php } ?>               
             </div>
         </div>
-        <div class="row certificaccion-2" >
-            <div class="col-9 certificaccion- cert-2" >
+
+        <div class="row certificaccion-2 pb-5" data-aos="fade-right" data-aos-duration="1000" >
+            <div class="col-9 certificaccion- cert-2"  style="background: #eb5c01b0">
                 <?php include('admin/dbcon.php');
                 $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 16"); 
                 while($rown = mysqli_fetch_array($selectcii)){
@@ -196,22 +125,27 @@
                 $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 17"); 
                 while($rown = mysqli_fetch_array($selectcii)){
                 ?> 
-                <img src="assets/img/<?php echo $rown['img'];?>">
+                <img src="assets/img/<?php echo $rown['img'];?>" data-aos="flip-up" data-aos-duration="2000">
                 <?php } ?>    
             </div>
         </div>
-        <div class="row certificaccion-3">
-            <div class="certificaccion- text-center">
+
+        <div class="row certificaccion-3 pb-5" data-aos="fade-left" data-aos-duration="1000">
+            <div class="certificaccion- text-center" style="background: #eb5c01b0">
                 <?php include('admin/dbcon.php');
                 $selectcii = mysqli_query($mysqli,"SELECT * FROM `certificaccion` WHERE certificaccion.id = 18"); 
                 while($rown = mysqli_fetch_array($selectcii)){
                 ?> 
                 <h2 class="tittle-cert-2 tittle-cert" ><?php echo utf8_encode($rown['titulo']);?></h2>
-                <img class="pl-5 pt-4 pb-4 img-dela" src="assets/img/<?php echo $rown['img'];?>" alt="">
-                <p class="txt-cert-1"><?php echo utf8_encode($rown['descripcion']);?></p>
+                <img class="pl-5 pt-4 pb-4 img-dela" src="assets/img/<?php echo $rown['img'];?>" data-aos="flip-up" data-aos-duration="2000" alt="">
+                <p class="txt-cert-1 text-justify"><?php echo utf8_encode($rown['descripcion']);?></p>
                 <?php } ?>  
             </div>
         </div>
+    </div>
+
+
+
     </div>
 </body>
     <?php include('footer.php') ?>

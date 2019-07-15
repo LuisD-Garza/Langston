@@ -11,6 +11,26 @@
 .main-text {
   font-size: 70px;
 }
+
+.img100{
+  width: 100%;
+}
+
+.cards{
+  margin:20px; 
+  background: #eb5c01b0; 
+  border-radius: 23px; 
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out !important;
+}
+.cards:hover{
+      box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu{
+  background-color: #eb5c01;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ababab' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 .bg-navbar-r{
   display: none !important;
   background:#eb5c01b8!important;;
@@ -28,13 +48,61 @@
 .iconos img { cursor: pointer; margin-top: 20%; }
 .mensajeChat{padding: 0 15px;}
 
-.espacioChat { position: fixed; right: 0; height:100%; z-index:9999999999999999999; display:flex; justify-content: flex-end;align-items: center}
+.espacioChat { position: fixed; right: 0; height:100%; z-index:99; display:flex; justify-content: flex-end;align-items: center}
 .logo {
   text-align: center;
+}
+.raya-1{
+  background: #eb5c01b0; width: 39%; height: 10px
+}
+.raya-2{
+  background: #eb5c01b0; width: 39%; height: 10px
+}
+.raya3{
+  margin-left: 0px!important;
+}
+.nos-txt-1{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-left: 22%;
+}
+.nos-txt-2{
+  display: flex; 
+  width: 75%; 
+  text-align: end; 
+  align-items: center; 
+  justify-content: flex-end;
 }
 .desct-txt{  width: 80%; }
 .contenedor {
   background-image: url("../img/Background.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenedor-nosotros {
+  background-image: url("../img/Bg-nosotros.png)");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenedor-certificaciones {
+  background-image: url("../img/Bg-Cert-Meb.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contenedor-sectores{
+    background-image: url("../img/Bg-sect.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .contenedor-product{
@@ -42,12 +110,9 @@
   background-size: cover;
 }
 .circulo img .circulo-2 img .circulo-3 img{ width: 100% }
+
 .contenedor-hecho-medida {
-  background: #EB5C01;
-  -webkit-box-shadow: -3px 11px 15px -3px;
-          box-shadow: -3px 11px 15px -3px;
-  position: relative;
-  margin-top: -20px;
+      width: 60%;
 }
 
 .text-hecho-medida {
@@ -89,6 +154,11 @@
   color: white;
 }
 
+.divider {
+  border: 50px solid transparent;
+  background-color: #5d5db1;
+}
+
 .btn-medida {
   padding-left: 25px;
   padding-right: 25px;
@@ -110,7 +180,6 @@
 
 .cont-txt-historia {
   margin: auto;
-  margin-left: -150px;
 }
 
 .txt-historia {
@@ -127,14 +196,48 @@
   padding-left: 10px;
   border-radius: 10px;
   padding-right: 10px;
-  margin-bottom: 25px;
 }
 
 .cont-text {
-  width: 124%;
-  background: #EB5C01;
+  background: #eb5c01b0;
+}
+.container {
+  position: relative;
+  width: 50%;
 }
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+    background-color: #101010c7;
+}
+
+.img1:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 .img-medida {
   width: 80%;
   margin: 40px;
@@ -161,7 +264,6 @@
 }
 
 .cont-product:hover {
-  background: #F9B256;
   cursor: pointer;
 }
 
@@ -200,7 +302,6 @@
 }
 
 .pruebas-cont {
-  background: #EB5C01;
   height: 60%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -223,7 +324,6 @@
 }
 
 footer {
-  margin-top: 15px;
   height: 300px;
   background: #3D3D3D;
 }
@@ -297,7 +397,8 @@ footer {
 }
 
 .txt-calidad-2 {
-  margin-top: -32px;
+     width: 32%;
+    text-align: justify;
 }
 
 .cont-seguridad {
@@ -384,7 +485,6 @@ footer {
 
 .txt-head-mvv {
   padding-bottom: 1rem;
-  border-left: 3px solid white;
   padding-left: 15px;
 }
 
@@ -467,7 +567,7 @@ footer {
 .cont-sectores{
   color: white;
       text-align: center;
-    background: #EB5C01;
+    background: #eb5c01b0;
     /* margin: 0% 10%; */
     width: 50% !important;
 }
@@ -512,6 +612,9 @@ footer {
   }
   .contenedor-porque{
   background-image: url(../img/Bg-porque.png);
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .cont-cont{
@@ -679,7 +782,27 @@ footer {
 
 }
 /*movil'l*/
+@media (max-width: 768px){
+  .cont-alimentos{
+    margin-left: -16%!important;
+  }
+  .cont-sectores{
+        width: 70% !important;
+  }
+}
 @media (max-width: 425px){
+    .cont-alimentos{
+    margin-left: 0px!important;
+    margin-bottom: 1rem
+  }
+  .cont-agircultura {
+    margin-right: 0px;
+    margin-top: 1rem
+  }
+  .nos-txt-1{
+    margin-left: 0px;
+  }
+  .nos-txt-2{width: 100%}
   .txt-politica { display: inline-block; margin-left: 0px; margin-top: 0px;}
   .calidad{ margin-left:0px !important; margin-right: 0px !important; }
   .txt-calidad { padding-left: 0px; display: inline-block; }

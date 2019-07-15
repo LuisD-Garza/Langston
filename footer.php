@@ -1,10 +1,10 @@
-    <footer class="normal">
+    <footer class="normal" style="background-image: url('assets/img/prism.png'); ">
         <div class="row social-footer col-8">
             <i class="redes face fab fa-facebook-f"></i>
                 <i class="redes fab fa-twitter"></i>
                 <i class="redes fas fa-envelope"></i>
                 <i class="redes fas fa-phone"></i>
-        </div>
+        </div>  
         <div class="row text-footer">
             <div class="col-3 text-white cont-text-footer">
                 <h5 class="txt-footer">Monterrey (Planta)</h5>
@@ -47,7 +47,7 @@
 
         </div>
     </footer>
-    <footer class="respons">    
+    <footer class="respons" style="background-image: url('assets/img/prism.png'); ">    
         <div class="row social-footer col-8">
                 <i class="redes face fab fa-facebook-f"></i>
                 <i class="redes fab fa-twitter"></i>
@@ -95,4 +95,7 @@
         <div class="row mapa-r">   
                     <iframe class="map-footer-r" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.721867711954!2d-100.22091038566066!3d25.746709815506172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662eafb4e9b6da3%3A0xfb0ab8d1a83fb8b4!2sLangston+Companies+De+Mexico%2C+S.+De+RL+de+C.V.!5e0!3m2!1sen!2smx!4v1556680117692!5m2!1sen!2smx"  frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
+        <script>
+  AOS.init();
+</script>
     </footer>

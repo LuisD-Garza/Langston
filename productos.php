@@ -86,99 +86,79 @@
     <div class="body">
             
         <div class="container">
-
-            <div class="row pt-5" >
-                <div class="col-3 text-white cont-" style=" height: 500px; overflow: auto;" >
-                    <?php include('admin/dbcon.php');
-                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `productos`"); 
-                    while($rown = mysqli_fetch_array($selectcii)){
-                    ?>
-                    <div class="col btn-product mb-4" style="cursor: pointer;">
-                        <h3 class="mb-0"  onClick="window.location.href='productos.php?id=<?php echo utf8_encode($rown['id']); ?>'" ><?php echo utf8_encode($rown['nombre']) ?></h3>
-                    </div>
-                    <?php } ?>
-            </div>
-        <?php 
-        $id = $_GET['id'];
-        if ($id == 0) {
-           
-        }else
-        {?>
-            <div class="col  align-items-center justify-content-center">  
-                <div class="row pt-3 pb-5">
+            <div class="row pt-5">
 
                     <div class="col">
                         Diseño
-                        <select class="custom-select" class="d-block">
-                             <option selected>Seleccion una</option>
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `dis` WHERE id_producto = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                            <option value="<?php echo $rown['id'] ?>"><?php echo utf8_encode($rown['nombre']) ?></option>
-                            <?php } ?>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                     <div class="col">
                         Acabado
-                        <select class="custom-select" class="d-block">
-                             <option selected>Seleccion una</option>
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `acabado` WHERE id_producto = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                            <option value="<?php echo $rown['id'] ?>"><?php echo utf8_encode($rown['nombre']) ?></option>
-                            <?php } ?>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                     <div class="col">
                         Peso
-                        <select class="custom-select" class="d-block">
-                             <option selected>Seleccion una</option>
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `peso` WHERE id_producto = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                            <option value="<?php echo $rown['id'] ?>"><?php echo utf8_encode($rown['nombre']) ?></option>
-                            <?php } ?>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                     <div class="col">
                         Tipo de tela
-                        <select class="custom-select" class="d-block">
-                             <option selected>Seleccion una</option>
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `tipotela` WHERE id_producto = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                            <option value="<?php echo $rown['id'] ?>"><?php echo utf8_encode($rown['nombre']) ?></option>
-                            <?php } ?>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                     <div class="col">
                         Color
-                        <select class="custom-select" class="d-block">
-                             <option selected>Seleccion una</option>
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `color` WHERE id_producto = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                            <option value="<?php echo $rown['id'] ?>"><?php echo utf8_encode($rown['nombre']) ?></option>
-                            <?php } ?>
+                        <select>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
 
             </div>
-                    <div class="d-inline-block text-center">
-                            <?php include('admin/dbcon.php');
-                            $selectcii = mysqli_query($mysqli,"SELECT * FROM `productos` WHERE id = $id"); 
-                            while($rown = mysqli_fetch_array($selectcii)){
-                            ?>
-                        <img src="assets/img/<?php echo utf8_encode($rown['img']) ?>" alt="" style='width: 100%;' >
-                        <?php }  ?>
+            <div class="row pt-5">
+                <div class="col-3 text-white cont-">
+                    <div class="col btn-product">
+                        <h3 class="mb-0" >Super sacos</h3>
+                    </div>
+                    <div class="col btn-product">
+                        <h3 class="mb-0" >Tela</h3>
+                    </div>
+                    <div class="col btn-product">
+                        <h3 class="mb-0" >Bolsa Algodonera</h3>
+                    </div>
+                    <div class="col btn-product">
+                        <h3 class="mb-0" >Sacos BOPP</h3>
+                    </div>
+                    <div class="col btn-product">
+                        <h3 class="mb-0" >Sacos de papel kraft</h3>
                     </div>
                 </div>
-                <?php }?>
+                <div class="col d-flex align-items-center justify-content-center">  
+                    <div class="d-inline-block">
+                        <img src="assets/img/img-muestra.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
