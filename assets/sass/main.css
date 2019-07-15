@@ -84,7 +84,7 @@
 }
 
 .contenedor-nosotros {
-  background-image: url("../img/Bg-nosotros.png)");
+  background-image: url("../img/Bg-nosotros2.png)");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -251,14 +251,14 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 23px;
   width: 183px;
-  height: 180px;
+  height: 270px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }

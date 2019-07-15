@@ -90,35 +90,35 @@
         <div class="productos container pb-5 pl-0 pr-0">
             <div class="row justify-content-between">
 
-                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('http://lorempixel.com/500/500/');">
+                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('assets/img/hilosMaquina.png'); background-size: cover;">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
                         <div class="text h6">txt prueba 1</div>
                     </div>
                 </div>
 
-                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('https://picsum.photos/id/13/190/180');">
+                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('assets/img/maquinaTela.png'); background-size: cover">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
                         <div class="text h6">txt prueba 2</div>
                     </div>
                 </div>
 
-                <div class="col-2 cont-product img1" data-aos="flip-up" data-aos-duration="1000" style="background-image: url('https://picsum.photos/id/666/190/180');">
+                <div class="col-2 cont-product img1" data-aos="flip-up" data-aos-duration="1000" style="background-image: url('assets/img/maquinaSacos.png'); background-size: cover;">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
                         <div class="text h6">txt prueba 3</div>
                     </div>
                 </div>
 
-                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('https://picsum.photos/id/27/190/180');">
+                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('assets/img/maquinaHilos.png'); background-size: cover">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
                         <div class="text h6">txt prueba 4</div>
                     </div>
                 </div>
 
-                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('https://picsum.photos/id/237/190/180');">
+                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('assets/img/armadoSaco.png'); background-size: cover">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
                         <div class="text h6">txt prueba 5</div>
@@ -191,8 +191,8 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="col certificado-img">
-                        <img   src="assets/img/Rectángulo 6.png" alt="">
+                    <div class="col certificado-img d-flex justify-content-center align-items-center">
+                        <img   src="assets/img/saco.png" alt="">
                     </div>
                     </div>
                 </div>
