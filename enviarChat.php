@@ -1,14 +1,13 @@
 <?php
-require_once("nucleo.php");
+require_once("admin/dbcon.php");
 
-if(isset($_POST['texto']) && isset($_POST['tipo']) && isset($_POST['ip']))
+if(isset($_POST['msg']) && isset($_POST['idCliente']))
 {
-	$t = $_POST['texto'];
-	$ip = $_POST['ip'];
-	$tipo = $_POST['tipo'];
+	$msg = $_POST['msg'];
+	$idCliente = $_POST['idCliente'];
 	$mysqli->query("
-		INSERT INTO mensajes (ipadmin, ipcliente, texto, tipo, horafecha) 
-		VALUES ('" .$ipgeneral . "', '" . $ip ."', '" . $t . "', '" . $tipo . "', '')
+		INSERT INTO `mensajes` (`id`, `idUsuario`, `tipoUsuario`, `mensajeUsuario`, `idAdmin`, `horaMensaje`) 
+		VALUES (NULL, '$idCliente','1', '$msg', '', '');
 		");
 }
 ?>

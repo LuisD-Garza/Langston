@@ -42,8 +42,7 @@ include("cabecera.php");
 	<div onClick="window.location.href='<?php echo $path; ?>Certificaccion/index.php'" class="boton hvr-sweep-to-right">Certificacciones</div>
 	<div onClick="window.location.href='<?php echo $path; ?>Sectores/index.php'" class="boton hvr-sweep-to-right">Sectores</div>
 	<div onClick="window.location.href='<?php echo $path; ?>porque-langston/index.php'" class="boton hvr-sweep-to-right">Por que Langston? </div>
-	<div onClick="window.location.href='../admin.php'" class="boton hvr-sweep-to-right">Chat</div>
-	<div onClick="window.location.href='<?php echo $path; ?>productos/index.php'" class="boton hvr-sweep-to-right">Productos</div>
+		<div onClick="window.location.href='../admin.php'" class="boton hvr-sweep-to-right">Chat</div>
 </div>
 <?php } ?>
 

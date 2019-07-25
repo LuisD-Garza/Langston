@@ -2,7 +2,7 @@
 <html lang="en">
     <?php include('head.php') ?>
 <body>
-    <?php $page = 'porquelangston';include('navbar.php') ?>
+    <?php $page = 'porqueLangston';include('navbar.php') ?>
     <?php include('chat.php') ?>
     <div class="body">
          <div class="contenedor-porque pb-4">

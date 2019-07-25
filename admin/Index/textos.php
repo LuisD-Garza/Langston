@@ -15,7 +15,7 @@ if(isset($_POST['titulo']) && isset($_POST['descripcion']))
 {
 	$id = $mixto['id'];
 	$titulo = utf8_decode($_POST['titulo']);
-	$descripcion = utf8_decode($_POST['descripcion']);
+	$descripcion = nl2br(utf8_decode($_POST['descripcion']));
 	$descripcion = str_replace("<br>", '\n', $descripcion);
 	$descripcion = str_replace("'", "\'", $descripcion);
 	$subtitulo = utf8_decode($_POST['subtitulo']);
@@ -27,20 +27,20 @@ if(isset($_POST['titulo']) && isset($_POST['descripcion']))
 		if($cantidadMixto > 0)
 		{
 			$mysqli->query("UPDATE textos SET titulo = '$titulo', descripcion = '$descripcion', subtitulo = '$subtitulo', logo = '$imagenauxiliar' WHERE id = '$id'");
-			header("Location: " . $path . "Index/textos.php?accion=e");
+			header("Location: " . $path . "Index/textos.php?id=$id&accion=e");
 		} else {
 			$mysqli->query("INSERT INTO textos (titulo, descripcion, logo, subtitulo) VALUES ('$titulo', '$descripcion', '$imagenauxiliar', '$subtitulo')");
-			header("Location: " . $path . "Index/textos.php?accion=e");
+			header("Location: " . $path . "Index/textos.php?id=$id&accion=e");
 		}
 	} else {
 		copy($_FILES['foto']['tmp_name'], '../../assets/img/'.$imagen);
 		if($cantidadMixto > 0)
 		{
 			$mysqli->query("UPDATE textos SET titulo = '$titulo', descripcion = '$descripcion', subtitulo = '$subtitulo', logo = '$imagen' WHERE id = '$id'");
-			header("Location: " . $path . "Index/textos.php?accion=e");
+			header("Location: " . $path . "Index/textos.php?id=$id&accion=e");
 		} else {
 			$mysqli->query("INSERT INTO textos (titulo, descripcion, logo, subtitulo) VALUES ('$titulo', '$descripcion', '$imagenauxiliar', '$subtitulo')");
-			header("Location: " . $path . "Index/textos.php?accion=e");		
+			header("Location: " . $path . "Index/textos.php?id=$id&accion=e");		
 		}
 	}
 }

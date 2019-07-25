@@ -1,3 +1,8 @@
+.body{
+  /*font-family: 'Pacifico', cursive;*/
+  /*font-family: 'Vollkorn', serif; titulos */
+  font-family: 'Didact Gothic', sans-serif;  /* textos */
+}
 
 .redes {
   padding-right: 21px;
@@ -10,6 +15,7 @@
 
 .main-text {
   font-size: 70px;
+  font-family: 'Vollkorn', serif;
 }
 
 .img100{
@@ -38,17 +44,36 @@
 .btn-menu {
   padding-right: 15px;
 }
-.chat { z-index: 99999; width: 250px; background: #eb5c01; height: 50%; box-shadow: 1px 1px 4px black;}
+#minimzar{cursor: pointer;}
+.chat {    
+    position: fixed;
+    background: #ccc;
+    right: 20px;
+    bottom: 0;
+    padding: 20px;
+    width: 30%;
+    height: 72%;
+}
+}
 .chat .titulo { letter-spacing: 1px; text-transform: uppercase; color: white; text-align: center; padding: 5px 0; font-size: 25px; border-radius: 20px 20px 0 0; }
 .chat .contenido { margin: 2%; background: white;overflow-y: scroll; height: 65%; width: 100; padding: 5px;}
-.chat input[type=text] { width: 96%; height: 20px; border: 1px solid gray; padding: 5px; border: none;}
+/*.chat input[type=text] {  font-family: 'Didact Gothic', sans-serif; width: 96%; height: 20px; border: 1px solid gray; padding: 5px; border: none;}*/
 //.redes-1 { z-index: 9999; position: absolute; display: flex; width: 100%; height: 366px; align-items: center; justify-content: flex-end; right: 10px; }
 .redes-1 { display: none; }
 .iconos { position: fixed; right: 0; top: 20%; bottom:20%;}
 .iconos img { cursor: pointer; margin-top: 20%; }
 .mensajeChat{padding: 0 15px;}
 
-.espacioChat { position: fixed; right: 0; height:100%; z-index:99; display:flex; justify-content: flex-end;align-items: center}
+.espacioChat {     
+  z-index: 99999999;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  text-align: center;
+  width: 350px;
+  cursor: pointer;
+  background: #999;
+}
 .logo {
   text-align: center;
 }
@@ -74,7 +99,7 @@
   align-items: center; 
   justify-content: flex-end;
 }
-.desct-txt{  width: 80%; }
+.desct-txt{  width: 80%;  font-family: 'Didact Gothic', sans-serif; }
 .contenedor {
   background-image: url("../img/Background.png");
   background-attachment: fixed;
@@ -357,7 +382,7 @@ footer {
 }
 
 .contenedor-nosotros {
-  background-image: url(../img/Bg-nosotros.png);
+  background-image: url(../img/Bg-nosotros2.png);
   
   background-size: cover;
 }
@@ -632,7 +657,7 @@ footer {
   height: 300px;
 }
   .contenedor-sect{
-  background-image: url(../img/Bg-sect.png);
+  background-image: url(../img/Bg-sect2.png);
   background-size: cover;
 }
 .btn-product{

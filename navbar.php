@@ -15,8 +15,8 @@
             <a href="" class="nav-item nav-link <?php if($page=='productos'){echo 'active';}?>">Productos</a>
             <a href="certificacciones.php" class="nav-item nav-link <?php if($page=='certificaciones'){echo 'active';}?>">Certificaciones</a>
             <a href="sectores.php" class="nav-item nav-link <?php if($page=='sectores'){echo 'active';}?>">Sectores</a>
-            <a href="porqueLangston.php" class="nav-item nav-link <?php if($page=='porque'){echo 'active';}?>">¿Por qué Langston?</a>
-            <a href="" class="nav-item nav-link <?php if($page=='contacto'){echo 'active';}?>">Contacto</a>
+            <a href="porqueLangston.php" class="nav-item nav-link <?php if($page=='porqueLangston'){echo 'active';}?>">¿Por qué Langston?</a>
+            <a href="contact.php" class="nav-item nav-link <?php if($page=='contacto'){echo 'active';}?>">Contacto</a>
         </div>
     </div>
 </nav>

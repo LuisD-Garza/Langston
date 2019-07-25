@@ -11,6 +11,7 @@ include("../cabecera.php");
 <div class="titulo">Categorias</div>
 <div class="linea"></div>
 <div class="accion">
+	<div onClick="window.location.href='<?php echo $path.'Index/agregarList.php'; ?>'" class="boton hvr-sweep-to-right">Agregar</div>
 	<div onClick="window.location.href='<?php echo $path.'Index/index.php'; ?>'" class="boton hvr-sweep-to-right">Regresar</div>
 </div>
 <div class="objetos">
@@ -23,7 +24,7 @@ include("../cabecera.php");
 		<div class="titulo"><?php echo utf8_encode($categorias['titulo']); ?></div>
 		<div class="acciones">
 			<div onClick="window.location.href='editar_categoria.php?id=<?php echo $categorias['id']; ?>'" class="boton hvr-sweep-to-right" style="background: #f3c426;">Editar</div>
-			<div onClick="eliminar(<?php echo $categorias['id']; ?>)" class="boton hvr-sweep-to-right" style="background: #e02525;">Eliminar</div>
+			<div onClick="window.location.href='eliminarList.php?id=<?php echo $categorias['id']; ?>'" class="boton hvr-sweep-to-right" style="background: #e02525;">Eliminar</div>
 		</div>
 	</div>
 	<?php } ?>

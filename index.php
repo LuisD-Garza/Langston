@@ -4,7 +4,7 @@
 <body>
 
     <?php $page = 'inicio';include('navbar.php') ?>
-    <?php include('chat.php') ?>
+    
  <header >
 
     </header>
@@ -46,7 +46,7 @@
                     <div class="textos-hecho-medida" >
                         <h1 class="main-text  text-white p-0"><?php echo utf8_encode($rown['titulo']);?></h1>
                         <h3 class="text-white secondary-txt-medida"><?php echo utf8_encode($rown['subtitulo']);?></h3>
-                        <p class="p-txt-medida"><?php echo utf8_encode($rown['descripcion']);?></p>
+                        <p class="p-txt-medida" id="textSec1"></p>
                         <p class="p-txt-medida d-none" id="hiddentxtSec1" ><?php echo utf8_encode($rown['descripcion']);?></p>
                         <button id="btn-sec1" class="btn btn-dark btn-medida">Ver más</button>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="cont-text divider">
                         <h2 class="h1 pl-3" >Historia</h2>
                         <!-- <img class="pl-3"   src="assets/img/<?php echo $rown['logo'];?>" alt="" > -->
-                        <p class="txt-historia pl-3" ><?php echo utf8_encode($rown['descripcion']);?></p>
+                        <p class="txt-historia pl-3" id="textHistoria" ><?php echo utf8_encode($rown['descripcion']);?></p>
                         <p class="txt-historia pl-3 d-none" id="hiddentxt" ><?php echo utf8_encode($rown['descripcion']);?></p>
                             <div class="pl-3" >
                                 <button id="btn-historia" class="btn-historia btn btn-dark" >Historia de LCM</button>
@@ -89,42 +89,18 @@
     <!-- Productos -->
         <div class="productos container pb-5 pl-0 pr-0">
             <div class="row justify-content-between">
+                <?php include('admin/dbcon.php');
+                $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.especial = 4"); 
+                while($rown = mysqli_fetch_array($selectcii)){
+                ?>
 
-                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('assets/img/hilosMaquina.png'); background-size: cover;">
+                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('assets/img/<?php echo utf8_encode($rown['logo']) ?>'); background-size: cover;">
                     <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
                      <div class="overlay" style="border-radius: 23px">
-                        <div class="text h6">txt prueba 1</div>
+                        <div class="text h6"><?php echo utf8_encode($rown['titulo']) ?></div>
                     </div>
                 </div>
-
-                <div class="col-2 cont-product img1" data-aos="flip-left" data-aos-duration="1000" style="background-image: url('assets/img/maquinaTela.png'); background-size: cover">
-                    <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
-                     <div class="overlay" style="border-radius: 23px">
-                        <div class="text h6">txt prueba 2</div>
-                    </div>
-                </div>
-
-                <div class="col-2 cont-product img1" data-aos="flip-up" data-aos-duration="1000" style="background-image: url('assets/img/maquinaSacos.png'); background-size: cover;">
-                    <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
-                     <div class="overlay" style="border-radius: 23px">
-                        <div class="text h6">txt prueba 3</div>
-                    </div>
-                </div>
-
-                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('assets/img/maquinaHilos.png'); background-size: cover">
-                    <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
-                     <div class="overlay" style="border-radius: 23px">
-                        <div class="text h6">txt prueba 4</div>
-                    </div>
-                </div>
-
-                <div class="col-2 cont-product img1" data-aos="flip-right" data-aos-duration="1000" style="background-image: url('assets/img/armadoSaco.png'); background-size: cover">
-                    <!-- <img src="http://lorempixel.com/500/500/" alt="Avatar" class="image"> -->
-                     <div class="overlay" style="border-radius: 23px">
-                        <div class="text h6">txt prueba 5</div>
-                    </div>
-                </div>
-       
+                <?php } ?>  
             </div>
         </div>
     <!-- Certificado -->
@@ -139,47 +115,19 @@
                                 </div>
                                 <div class="col-6 list-certificado">
                                     <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 10"); 
+                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 5"); 
                                     while($rown = mysqli_fetch_array($selectcii)){
                                     ?>
                                     <h2 class="tittle-certificado"><?php echo utf8_encode($rown['titulo']);?></h2>
                                     <?php } ?>
+                                    <ul>
                                     <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 11"); 
+                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.especial = 5"); 
                                     while($rown = mysqli_fetch_array($selectcii)){
                                     ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
+                                        <li class="text-white h3" ><?php echo utf8_encode($rown['titulo']);?></li>
                                     <?php } ?>
-                                    <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 12"); 
-                                    while($rown = mysqli_fetch_array($selectcii)){
-                                    ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
-                                    <?php } ?>
-                                    <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 13"); 
-                                    while($rown = mysqli_fetch_array($selectcii)){
-                                    ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
-                                    <?php } ?>
-                                    <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 14"); 
-                                    while($rown = mysqli_fetch_array($selectcii)){
-                                    ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
-                                    <?php } ?>
-                                    <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 15"); 
-                                    while($rown = mysqli_fetch_array($selectcii)){
-                                    ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
-                                    <?php } ?>
-                                    <?php include('admin/dbcon.php');
-                                    $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 16"); 
-                                    while($rown = mysqli_fetch_array($selectcii)){
-                                    ?>
-                                    <label class="d-block label-txt-pruebas" for=""><i class="fa fa-check" aria-hidden="true"></i><h3 class="d-inline text-white"><?php echo utf8_encode($rown['titulo']);?></h3></label>
-                                    <?php } ?>    
+                                    </ul>
                                 </div>
                                 <div class="col-2 certifiaco-por">
                                     <div class="certificados">
@@ -199,5 +147,6 @@
         </div>
     </div>
     <?php include('footer.php') ?>
+    <?php include('chat.php') ?>
 </body>
 </html>

@@ -9,12 +9,13 @@ if($login == false)
 $id = $_GET['id'];
 $obtenerObjeto = $mysqli->query("SELECT * FROM `nosotros` WHERE nosotros.id = '$id'");
 $objeto = $obtenerObjeto->fetch_assoc();
-$descripcion = utf8_decode($_POST['descripcion']);
-$descripcion = str_replace("<br>", '\n', $descripcion);
-$descripcion = str_replace("'", "\'", $descripcion);
+
 
 if(isset($_POST['titulo']))
 {
+	$descripcion = utf8_decode($_POST['descripcion']);
+	$descripcion = str_replace("<br>", '\n', $descripcion);
+	$descripcion = str_replace("'", "\'", $descripcion);
 	$titulo = utf8_decode($_POST['titulo']);
 	$imagen = $_FILES['foto']['name'];
 
@@ -34,7 +35,7 @@ include("../cabecera.php");
 <div class="titulo">Editar objeto</div>
 <div class="linea"></div>
 <div class="accion">
-	<div onClick="window.location.href='<?php echo $path; ?>Nosotros/mixto-s.php?id=3" class="boton hvr-sweep-to-right">Regresar</div>
+	<div onClick="window.location.href='<?php echo $path.'Nosotros/mixto-s.php?id=3'; ?>'" class="boton hvr-sweep-to-right">Regresar</div>
 </div>
 <img src="<?php echo $objeto['img']; ?>" />
 <form class="login logindos" action="" method="POST" enctype="multipart/form-data">
@@ -47,13 +48,14 @@ include("../cabecera.php");
 		<div class="titulo" style="padding: 10px 0;">Titulo:</div>
 		<input type="text" name="titulo" value="<?php echo utf8_encode($objeto['titulo']); ?>" required />
 	</div>
-
+<?php if ($objeto['id'] == 9){ ?>
+	
+<?php }else{ ?>
 	<div class="campo">
 		<div class="titulo" style="padding: 10px 0;">Descripción:</div>
 		<textarea name="descripcion" ><?php echo utf8_encode($objeto['descripcion']); ?></textarea>
 	</div>
-
-
+<?php 	} ?>
 	<input type="submit" value="Guardar" style="" />
 </form>
 

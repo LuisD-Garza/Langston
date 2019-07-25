@@ -1,71 +1,112 @@
 <?php
-require_once("nucleo.php");
+require_once("admin/dbcon.php");
 ?>
-<title>dwd</title>
-<style type="text/css">
-	@font-face { font-family: S; src: url(fuentes/S.ttf);  }
-	@font-face { font-family: SB; src: url(fuentes/SB.ttf); }
-html { scroll-behavior: smooth; }
-body { background: #eb5c01; margin: 0; font-family: S, sans-serif; }
-input, select { padding: 5px;  font-family: S; width: 100%; letter-spacing: 1px; border: none;  }
-.titulo { letter-spacing: 1px; text-transform: uppercase; color: white; text-align: center; padding: 5px 0; font-size: 25px; border-radius: 20px 20px 0 0; }
-</style>
-<div style="background: transparent; display: flex; justify-content: space-between;">
-	<img style="background: white; padding: 10px;" src="assets/img/LOGO.png" />
-	<div class="titulos" style="width: 100%; position: relative; top: 10px;">
-					<center><div class="titulo"><b>Chat</b></div></center>
-					<hr style="border: 1px solid white;">
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
 
-<select name="seleccionarip" style="border-top: 1px solid #26736b;">
-	<?php 
-	$oM = $mysqli->query("SELECT DISTINCT ipcliente FROM mensajes");
-	while($M = $oM->fetch_assoc()){
-		?>
-		<option value="<?php echo $M['ipcliente']; ?>"><?php echo $M['ipcliente']; ?></option>
-	<?php } ?>
-</select><br>
+<head>
 
-<div class="chat" style="background: white; overflow-y: scroll; width: 100%; height: 75%;">sss</div>
+	<?php include('head.php')	 ?>
 
-<form action="" class="fchat" method="POST" style="padding: 10px;">
-	<input type="text" name="texto" placeholder="Escribe algo..." required/><br>
-</form>
+  	<title>Simple Sidebar - Start Bootstrap Template</title>
 
-<script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body style="height:100%">
+
+  <div class="d-flex" id="wrapper" style="height:100%">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper" style="width: 25%">
+      <div class="sidebar-heading text-center p-3 h3" >Chats</div>
+      <div class="list-group list-group-flush">
+        <?php include('admin/dbcon.php');
+        $selectcii = mysqli_query($mysqli,"SELECT * FROM `registroschat` "); 
+        while($rown = mysqli_fetch_array($selectcii)){
+        ?>
+        <a href="#" id="<?php echo utf8_encode($rown['id']); ?>" onclick="saludar('<?php echo utf8_encode($rown['id']); ?>')" class="list-group-item list-group-item-action bg-light"><?php  echo utf8_encode($rown['nombreCliente']); ?></a>
+    	<?php } ?>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" style="width: 100%">
+
+<!-- canvas-orange.jgp // prism.png  -->
+<nav class="navbar navbar-expand-lg navbar-dark menu" style="z-index:99999999999999999999;background-image: url('assets/img/prism.png'); " style="width: 100%">
+    <a href="" class="navbar-brand">
+        <img src="assets/img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Langston
+    </a>
+    <!-- Hamburgesa -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navResponse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navResponse">
+        <div class="navbar-nav text-white d-flex justify-content-around" style="width: 100%">
+        </div>
+    </div>
+</nav>
+
+    <div class="container-fluid" style="height: 91%">
+    	<div class="caja-msg" style="height:90%; overflow-x: auto; padding:20px;">
+    		
+    	</div> 
+    	<form  class="text-center" action="">
+    		<div class="form-grup">
+    			<input class="" id="idCliente" type="text" value=''>
+    			<input type="text" class="" id="msg-idusuario">
+    			<input class="form-control d-inline-block input-msg" style="width: 40%" type="text" placeholder="Ingrese su mensaje...">
+    			<button class="btn btn-dark" id="btn-msg-admin" ><i class="fas fa-paper-plane"></i></button>
+    		</div>
+    	</form>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+</body>
+
 <script>
-	$('.chat').animate({
-    scrollTop: 400000
-}, 'slow');
+	
 
-$(".fchat").submit(function(e){
-	e.preventDefault();
-	var m = $("select[name=seleccionarip] option:selected").val();
-	var t = $("input[name=texto]").val();
-	var tip = "admin";
-	$("input[name=texto]").val("");
-	$.post("enviarChat.php", {texto: t, tipo: tip, ip: m});
-	$('.chat').animate({
-        scrollTop: 400000
-    }, 'slow');
-});
+		$('#btn-msg-admin').on('click', function(){
+			msg = $('.input-msg').val();
+			id = $('#msg-idusuario').val();
+			$.post("pruebachat/enviarChat.php", {msg:msg, id:id}, function(data){
+				$('.input-msg').val('');
+			})
+		})
 
-$("select[name=seleccionarip]").change(function(){
-	$('.chat').animate({
-        scrollTop: 400000
-    }, 'slow');
-});
+		function saludar(id){
+			$('#msg-idusuario').val(id);
+    	$.post("pruebachat/obtenerChat.php", {id: id}, function(d){
+        	oldd = d 
+        	console.log(d);
+        	$(".caja-msg").html(d);
+        	setInterval(function(id){
+				var lastIdMsg = localStorage.getItem('id');
+				idUsuario = $('#idCliente').val();
+				$.post("pruebachat/nuevoMsg.php", {lastIdMsg: lastIdMsg, idUsuario: idUsuario}, function(d){
+    		   		oldd = d 
+         			$('.caja-msg').append(d);
+    	 		});
 
-
-function actualizarChat()
-{
-	var m = $("select[name=seleccionarip] option:selected").val();
-	$("title").html(m);
-	$.post("obtenerChat.php", {ip: m,}, function(d){
-		$(".chat").html(d);
-	});
-}
-
-setInterval("actualizarChat()", 100);
+			}, 2500);
+    	});
+		}
+	
 </script>
+
+</html>

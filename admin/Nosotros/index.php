@@ -40,7 +40,7 @@ include("../cabecera.php");
 	<div onClick="window.location.href='<?php echo $path; ?>Nosotros/textos.php?id=1'" class="boton hvr-sweep-to-right">Seccion 1</div>
 	<div onClick="window.location.href='<?php echo $path; ?>Nosotros/mixto-s.php?id=2'" class="boton hvr-sweep-to-right">Seccion 2</div>
 	<div onClick="window.location.href='<?php echo $path; ?>Nosotros/mixto-s.php?id=3'" class="boton hvr-sweep-to-right">Seccion 3</div>
-	<div onClick="window.location.href='<?php echo $path.'./index.php'; ?>'" class="boton hvr-sweep-to-right">Regresar</div>
+	<div onClick="window.location.href='<?php echo $path.'/index.php'; ?>'" class="boton hvr-sweep-to-right">Regresar</div>
 </div>
 <?php } ?>
 

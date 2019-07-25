@@ -76,7 +76,7 @@ while($textos = $obtenerCategorias->fetch_assoc())
 			?>
 			<div class="objeto P">
 				<img src="../../assets/img/<?php echo $objetos['img']; ?>" />
-				<div class="titulo"><?php echo $objetos['titulo']; ?></div>
+				<div class="titulo"><?php echo utf8_encode($objetos['titulo']); ?></div>
 				<div class="texto"><?php echo utf8_encode($objetos['descripcion']); ?></div>
 				<div class="acciones">
 					<?php if ($objetos['id'] == 9 ) { ?>
