@@ -1,5 +1,7 @@
 <?php
 require_once("admin/dbcon.php");
+include("modalTrash.php");
+include("pruebachat/mail.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" style="height:100%">
@@ -8,7 +10,6 @@ require_once("admin/dbcon.php");
 
 	<?php include('head.php')	 ?>
 
-  	<title>Simple Sidebar - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +41,7 @@ require_once("admin/dbcon.php");
     <div id="page-content-wrapper" style="width: 100%">
 
 <!-- canvas-orange.jgp // prism.png  -->
-<nav class="navbar navbar-expand-lg navbar-dark menu" style="z-index:99999999999999999999;background-image: url('assets/img/prism.png'); " style="width: 100%">
+<nav class="navbar navbar-expand-lg navbar-dark menu" style="background-image: url('assets/img/prism.png'); " style="width: 100%">
     <a href="" class="navbar-brand">
         <img src="assets/img/LOGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Langston
@@ -50,7 +51,10 @@ require_once("admin/dbcon.php");
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navResponse">
-        <div class="navbar-nav text-white d-flex justify-content-around" style="width: 100%">
+        <div class="navbar-nav text-white d-flex justify-content-end" style="width: 100%">
+          <i class="fas fa-trash  pr-4"   onclick="verificar()" data-toggle="modal" data-target="#exampleModal" ></i>
+          <i class="fas fa-envelope pr-4" onclick="verificar2()" data-toggle="modal" data-target="#modalMail" ></i>
+          <a href="admin/index.php" style="text-decoration: none"><i class=" text-white fas fa-arrow-right  "></i></a>  
         </div>
     </div>
 </nav>
@@ -61,9 +65,9 @@ require_once("admin/dbcon.php");
     	</div> 
     	<form  class="text-center" action="">
     		<div class="form-grup">
-    			<input class="" id="idCliente" type="text" value=''>
-    			<input type="text" class="" id="msg-idusuario">
-    			<input class="form-control d-inline-block input-msg" style="width: 40%" type="text" placeholder="Ingrese su mensaje...">
+    			<input class="d-none" id="idCliente" type="text" value=''>
+    			<input type="text" class="d-none" id="msg-idusuario">
+    			<input class="form-control d-inline-block input-msg " style="width: 40%" type="text" placeholder="Ingrese su mensaje...">
     			<button class="btn btn-dark" id="btn-msg-admin" ><i class="fas fa-paper-plane"></i></button>
     		</div>
     	</form>
@@ -93,19 +97,20 @@ require_once("admin/dbcon.php");
 			$('#msg-idusuario').val(id);
     	$.post("pruebachat/obtenerChat.php", {id: id}, function(d){
         	oldd = d 
-        	console.log(d);
         	$(".caja-msg").html(d);
-        	setInterval(function(id){
-				var lastIdMsg = localStorage.getItem('id');
-				idUsuario = $('#idCliente').val();
-				$.post("pruebachat/nuevoMsg.php", {lastIdMsg: lastIdMsg, idUsuario: idUsuario}, function(d){
-    		   		oldd = d 
-         			$('.caja-msg').append(d);
-    	 		});
+        });
 
-			}, 2500);
-    	});
+        	setInterval(function(id){
+				    var lastIdMsg = localStorage.getItem('id2');
+            console.log(lastIdMsg);
+				    idUsuario = $('#idCliente').val();
+				    $.post("pruebachat/nuevoMsg2.php", {lastIdMsg: lastIdMsg, idUsuario: idUsuario}, function(m){
+    		   		msg = m
+         			$('.caja-msg2').append(m);
+    	 		  });
+          }, 2500);
 		}
+
 	
 </script>
 

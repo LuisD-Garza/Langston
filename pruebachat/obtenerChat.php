@@ -1,6 +1,6 @@
 <?php
 require_once("../admin/dbcon.php");
-echo '<div class="caja-msg" style="padding: 10px;">';
+echo '<div class="caja-msg2" style="padding: 10px;">';
 if(isset($_POST['id']))
 {
 $obtenerMensajes = $mysqli->query("SELECT * FROM mensajes WHERE idUsuario = '" . $_POST['id'] . "' ");

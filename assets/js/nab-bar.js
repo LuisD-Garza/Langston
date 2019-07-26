@@ -55,6 +55,8 @@ if (screen.width <= 769) {
 
 if (screen.width <=426) {
     AOS.refresh();
+    $('.lista-calidad').addClass('h4');  
+    $('.img-inicio').addClass('d-none');
     $('.cont-text-nosotros').css({"width":"100%",})
     $('.raya').css({"width":"100%","margin-left":"0px"})
     $('.cont-img-nosotros').addClass('d-none');

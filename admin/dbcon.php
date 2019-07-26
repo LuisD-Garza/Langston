@@ -1,3 +1,3 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "mercadot_langston");
+$mysqli = new mysqli("localhost", "mercadot_luis", "Z~}jJIUx{eCj", "mercadot_langston");
 ?>

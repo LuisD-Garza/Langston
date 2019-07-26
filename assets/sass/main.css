@@ -816,6 +816,7 @@ footer {
   }
 }
 @media (max-width: 425px){
+  .chat{width: 350px}
     .cont-alimentos{
     margin-left: 0px!important;
     margin-bottom: 1rem

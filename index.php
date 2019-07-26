@@ -19,7 +19,7 @@
                     ?>
                     <?php } ?>
                 </div>
-                <div class="textos col-8">
+                <div class="textos col-sm-8 col-12">
                     <?php include('admin/dbcon.php');
                     $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 1"); 
                     while($rown = mysqli_fetch_array($selectcii)){
@@ -37,8 +37,8 @@
          <div class=""  data-aos="fade-left" data-aos-duration="1000" style="background: #eb5c01b0;">
             <div class="container cont-hecho-medida">
             <div class="echoa-medida row">
-                <div class="jumbotron jumbotron-fluid contenedor-hecho-medida m-3 jumbo-inicio" style="background-color: #e9ecef00">
-                <div class="container">
+                <div class=" m-0 jumbotron jumbotron-fluid contenedor-hecho-medida m-3 jumbo-inicio col-sm-6 col-12 " style="background-color: #e9ecef00">
+                <div class="">
                     <?php include('admin/dbcon.php');
                     $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 2"); 
                     while($rown = mysqli_fetch_array($selectcii)){
@@ -105,43 +105,38 @@
         </div>
     <!-- Certificado -->
         <div class=" pb-3"  data-aos="fade-left" data-aos-duration="1000" style="background: #eb5c01b0;">
-                <div class="container cont-hecho-medida">
-                    <div class="pruebas-cont row">
-                        <div class=" jumbo-certificado jumbotron jumbotron-fluid contenedor-hecho-medida m-3" style="background-color: #e9ecef00">
-                            <div class="container">
-                                <div class="row">
-                                <div class="col-3 pl-0">
+                <div class=" cont-hecho-medida">
+                    <div class="pruebas-cont row" style="background-color: #e9ecef00">
+                                <div class="col pl-0 d-flex justify-content-center align-items-center">
                                     <img class="img-certificado" src="assets/img/quality-badge.png" alt="">
                                 </div>
-                                <div class="col-6 list-certificado">
+                                <div class="col list-certificado d-flex justify-content-center align-items-center">
+                                    <div class="cajita">
                                     <?php include('admin/dbcon.php');
                                     $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.id = 5"); 
                                     while($rown = mysqli_fetch_array($selectcii)){
                                     ?>
-                                    <h2 class="tittle-certificado"><?php echo utf8_encode($rown['titulo']);?></h2>
+                                    <p class="tittle-certificado h2 m-0"><?php echo utf8_encode($rown['titulo']);?></p>
                                     <?php } ?>
                                     <ul>
                                     <?php include('admin/dbcon.php');
                                     $selectcii = mysqli_query($mysqli,"SELECT * FROM `textos` WHERE textos.especial = 5"); 
                                     while($rown = mysqli_fetch_array($selectcii)){
                                     ?>
-                                        <li class="text-white h3" ><?php echo utf8_encode($rown['titulo']);?></li>
+                                        <li class="text-white h2 m-0 lista-calidad" ><?php echo utf8_encode($rown['titulo']);?></li>
                                     <?php } ?>
                                     </ul>
+                                    </div>
                                 </div>
-                                <div class="col-2 certifiaco-por">
-                                    <div class="certificados">
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <div class=" ">
                                         <h5 class="text-white m-0" >Certificados por:</h5>
                                         <br>
                                         <img  src="assets/img/Capa 14.png" alt="">    
                                     </div>
                                 </div>
-                                </div>
-                            </div>
-                        </div>
                     <div class="col certificado-img d-flex justify-content-center align-items-center">
                         <img   src="assets/img/saco.png" alt="">
-                    </div>
                     </div>
                 </div>
         </div>

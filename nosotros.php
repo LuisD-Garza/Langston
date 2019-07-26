@@ -3,7 +3,7 @@
     <?php include('head.php') ?>
 <body>
     <?php $page = 'nosotros';include('navbar.php') ?>
-    <?php include('chat.php') ?>
+
 
 <header class="contenedor-nosotros">
 
@@ -179,6 +179,7 @@
     </div>
 </div>
     <?php include('footer.php') ?>
+        <?php include('chat.php') ?>
 </body>
 
 </html>
